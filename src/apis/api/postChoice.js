@@ -1,7 +1,7 @@
 import { API } from "../utils";
 export const postChoiceData = async ({ choice }) => {
   try {
-    const response = await API.post("/api/lanterns", {
+    const response = await API.post("", {
       choice: choice,
     });
     return response.data;
