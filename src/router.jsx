@@ -3,6 +3,7 @@ import App from "./App";
 import About from "./pages/About/index";
 import Home from "./pages/Home/index";
 import First from "./pages/First/index";
+import Result from "./pages/First/result";
 import NotFound from "./pages/notFound";
 import Splash from "./pages/Splash/index";
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
 
       //첫페이지
       { path: "/first", element: <First /> },
+      { path: "/result", element: <Result /> },
 
       // 어바웃 페이지
       { path: "/about", element: <About /> },

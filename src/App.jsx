@@ -3,7 +3,6 @@ import { GlobalStyle } from "./style/globalStyle";
 import styled from "styled-components";
 import Nav from "./layouts/nav/Nav";
 
-
 const Background = styled.div`
   width: 100vw;
   max-width: 767px;
@@ -14,7 +13,6 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: whitesmoke;
 `;
 
 const Wrapper = styled.div`
