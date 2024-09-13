@@ -4,6 +4,8 @@ import Comment from "../../components/comment/Comment";
 import Choice from "../../components/comment/Choice";
 import { commentsData } from "../../data/comment";
 
+import Background from "../../components/Background/Backgound";
+
 const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [showChoice, setShowChoice] = useState(true);
@@ -33,6 +35,7 @@ const Index = () => {
 
   return (
     <div>
+      <Background />
       {currentData.type === "Choice" ? (
         <Choice
           // onSelect={handleSelect}

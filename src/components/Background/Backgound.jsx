@@ -3,7 +3,7 @@ import { BGS } from "../../datas/Backgrounds/data";
 import { CHANS, DONGS, JUNGS, OHS } from "../../datas/persons/data";
 import { useState, useEffect } from "react";
 
-const BackgroundWithPerson = () => {
+const Background = () => {
   const [backgroundId, setBackgroundId] = useState(null);
   const [personGroup, setPersonGroup] = useState(null); // API에서 받는 그룹 값 (idg, jjy, otj, ocj)
   const [personId, setPersonId] = useState(null); // API에서 받는 사람 ID 값
@@ -67,4 +67,4 @@ const BackgroundWithPerson = () => {
   );
 };
 
-export default BackgroundWithPerson;
+export default Background;
