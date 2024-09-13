@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { GlobalStyle } from "./style/globalStyle";
 import styled from "styled-components";
+import Nav from "./layouts/nav/Nav";
+
 
 const Background = styled.div`
   width: 100vw;
@@ -23,6 +25,7 @@ const Wrapper = styled.div`
 const Layout = () => {
   return (
     <Background>
+      {/* <Nav /> */}
       <Wrapper>
         <Outlet />
       </Wrapper>
