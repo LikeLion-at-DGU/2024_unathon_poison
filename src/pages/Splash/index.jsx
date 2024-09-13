@@ -18,7 +18,7 @@ const Index = () => {
       setCurrentImage((prevImage) => prevImage + 1); // 다음 이미지로 변경
       console.log("이미지 변경됨:", currentImage + 1); // 변경된 이미지 로그 출력
     } else {
-      navigate("/"); // 마지막 이미지 후 특정 경로로 이동
+      navigate("/first"); // 마지막 이미지 후 특정 경로로 이동
     }
   };
 
