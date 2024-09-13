@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import NameComment from "../../components/comment/NameComment";
 import Comment from "../../components/comment/Comment";
 import Choice from "../../components/comment/Choice";
-// import BgImg from "../../components/BgImg"; // BgImg 컴포넌트 import
 import { commentsData } from "../../data/comment";
 import { postChoiceData } from "../../apis/api/postChoice";
-
-// firstData를 관리하는 파일에서 import
 import { firstData } from "../../data/firstData";
-
 import Background from "../../components/Background/Backgound";
 
 const Index = () => {
@@ -31,8 +27,6 @@ const Index = () => {
 
       // 선택에 따라 firstData에서 데이터 변경
       const newData = choice === "q1" ? firstData[0] : firstData[1];
-
-      // 이동하기 전에 데이터 설정
       setCurrentData(newData);
 
       // 선택에 따른 페이지 이동
@@ -52,25 +46,22 @@ const Index = () => {
     return () => {
       window.removeEventListener("click", handleTouch);
     };
-  }, []);
+  }, [currentData]); // Add currentData as dependency to handle changes properly
 
   // 현재 데이터
   const currentCommentData = currentData[currentIndex];
 
   return (
     <div>
-      {/* <BgImg bgNum={currentCommentData.bgNum} /> */}
-
-      {currentCommentData.type === "NameComment" ? (
+      <Background />
+      {currentCommentData?.type === "NameComment" ? (
         <NameComment
           name={currentCommentData.name}
           comment={currentCommentData.comment}
         />
-      ) : currentCommentData.type === "Comment" ? (
+      ) : currentCommentData?.type === "Comment" ? (
         <Comment comment={currentCommentData.comment} />
-      ) : currentCommentData.type === "Choice" ? (
-      <Background />
-      {currentData.type === "Choice" ? (
+      ) : currentCommentData?.type === "Choice" ? (
         <Choice
           q1={currentCommentData.q1}
           q2={currentCommentData.q2}

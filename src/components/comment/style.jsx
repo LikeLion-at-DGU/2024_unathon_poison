@@ -59,6 +59,7 @@ export const ChoiceWrapper = styled.div`
   position: relative;
   max-width: 767px;
   margin: 0 auto;
+  z-index: 99;
 `;
 
 export const ChoiceContainer = styled.div`
