@@ -6,12 +6,12 @@ import { commentsData } from "../../data/comment";
 
 const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showChoice, setShowChoice] = useState(true);
+  // const [showChoice, setShowChoice] = useState(true);
 
-  const handleSelect = (id) => {
-    setCurrentIndex(id);
-    setShowChoice(false);
-  };
+  // const handleSelect = (id) => {
+  //   setCurrentIndex(id);
+  //   setShowChoice(false);
+  // };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % commentsData.length);
@@ -33,8 +33,12 @@ const Index = () => {
 
   return (
     <div>
-      {showChoice ? (
-        <Choice onSelect={handleSelect} />
+      {currentData.type === "Choice" ? (
+        <Choice
+          // onSelect={handleSelect}
+          q1={currentData.q1}
+          q2={currentData.q2}
+        />
       ) : currentData.type === "NameComment" ? (
         <NameComment name={currentData.name} comment={currentData.comment} />
       ) : (

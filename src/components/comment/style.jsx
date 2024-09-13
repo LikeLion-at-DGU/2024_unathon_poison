@@ -17,7 +17,7 @@ export const NameCommentContainer = styled.div`
   justify-content: center;
   gap: 20px;
   border-radius: 30px;
-  padding-left: 20px;
+  padding: 20px;
 `;
 
 export const Name = styled.div`
