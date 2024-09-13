@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Nav from "./layouts/nav/Nav";
 
 
+import BackGround from "./components/Background/Backgound";
+
 const Background = styled.div`
   width: 100vw;
   max-width: 767px;
@@ -36,6 +38,7 @@ const Layout = () => {
 function App() {
   return (
     <>
+      <BackGround />
       <GlobalStyle />
       <Layout />
     </>
