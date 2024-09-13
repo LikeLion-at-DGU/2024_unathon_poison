@@ -9,6 +9,7 @@ const CommentBg = styled.div`
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   max-width: 767px;
   display: flex;
+  z-index: 99;
 `;
 
 const CommentBgWrapper = ({ children }) => {
