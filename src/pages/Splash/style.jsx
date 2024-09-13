@@ -8,4 +8,5 @@ export const SplashContainer = styled.div`
     `url(${$backgroundImage})`};
   background-size: cover;
   background-position: center;
+  position: relative;
 `;
