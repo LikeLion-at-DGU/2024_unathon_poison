@@ -13,7 +13,6 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: whitesmoke;
 `;
 
 const Wrapper = styled.div`

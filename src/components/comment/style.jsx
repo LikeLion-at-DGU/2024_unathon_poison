@@ -20,6 +20,19 @@ export const NameCommentContainer = styled.div`
   padding: 20px;
 `;
 
+export const MeCommentContainer = styled.div`
+  width: 80%;
+  border: 3px solid green;
+  background-color: white;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 30px;
+  padding: 20px;
+`;
+
 export const Name = styled.div`
   font-weight: bold;
 `;
