@@ -10,6 +10,8 @@ import { postChoiceData } from "../../apis/api/postChoice";
 // firstData를 관리하는 파일에서 import
 import { firstData } from "../../data/firstData";
 
+import Background from "../../components/Background/Backgound";
+
 const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentData, setCurrentData] = useState(commentsData);
@@ -67,6 +69,8 @@ const Index = () => {
       ) : currentCommentData.type === "Comment" ? (
         <Comment comment={currentCommentData.comment} />
       ) : currentCommentData.type === "Choice" ? (
+      <Background />
+      {currentData.type === "Choice" ? (
         <Choice
           q1={currentCommentData.q1}
           q2={currentCommentData.q2}
